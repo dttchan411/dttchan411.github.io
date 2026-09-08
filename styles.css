@@ -138,6 +138,7 @@ footer a { text-align: right; }
   .hero-shade { background: linear-gradient(0deg, rgba(10,10,9,.94) 0%, rgba(10,10,9,.62) 60%, rgba(10,10,9,.22) 100%); }
   .hero-content { width: 100%; padding: 120px 20px 55px; }
   .hero h1 { font-size: clamp(44px, 13vw, 66px); }
+  .hero h1 em { display: block; margin-top: 6px; font-size: .76em; }
   .hero-copy { font-size: 15px; line-height: 1.7; }
   .hero-index { display: none; }
   .principles { min-height: 0; padding: 0 20px; grid-template-columns: 1fr; }
