@@ -1,410 +1,118 @@
 <!DOCTYPE html>
-<html lang="ko" class="scroll-smooth">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>김동찬 | Dongchan Kim - Portfolio</title>
-  <meta name="description" content="김동찬의 개인 포트폴리오 및 홈페이지입니다." />
-  
-  <!-- Open Graph / SEO -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="김동찬 | Dongchan Kim - Portfolio" />
-  <meta property="og:description" content="문제를 해결하고 사용자 가치를 창출하는 개발자 김동찬의 홈페이지입니다." />
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Custom Styles -->
+  <meta name="description" content="시스템을 배우고 작은 아이디어를 코드로 옮기는 김동찬의 포트폴리오입니다." />
+  <meta name="theme-color" content="#10100f" />
+  <title>김동찬 | Systems, Code & Curiosity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest" defer></script>
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
-<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 antialiased min-h-screen relative overflow-x-hidden selection:bg-blue-500 selection:text-white">
-
-  <!-- Background Ambient Glows -->
-  <div class="glow-bg bg-blue-500 top-[-100px] left-[-100px]"></div>
-  <div class="glow-bg bg-purple-500 top-[30%] right-[-150px]"></div>
-  <div class="glow-bg bg-pink-500 top-[70%] left-[-100px]"></div>
-
-  <!-- Header / Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 glass-nav bg-white/75 dark:bg-slate-950/75 border-b border-slate-200/60 dark:border-slate-800/60 transition-colors">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center space-x-2.5 font-bold text-lg tracking-tight group">
-        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center font-black text-sm shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
-          DC
-        </span>
-        <span class="text-slate-800 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-          김동찬 <span class="text-xs font-normal text-slate-500 dark:text-slate-400">/ Dongchan</span>
-        </span>
-      </a>
-
-      <!-- Desktop Nav Menu -->
-      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-slate-600 dark:text-slate-300">
-        <a href="#about" class="desktop-nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">소개</a>
-        <a href="#skills" class="desktop-nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">기술 스택</a>
-        <a href="#projects" class="desktop-nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">프로젝트</a>
-        <a href="#experience" class="desktop-nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">경력 & 활동</a>
-        <a href="#contact" class="desktop-nav-link hover:text-blue-600 dark:hover:text-blue-400 transition-colors">연락처</a>
-      </nav>
-
-      <!-- Right Action Controls -->
-      <div class="flex items-center space-x-3">
-        <!-- Theme Toggle Button -->
-        <button id="theme-toggle" type="button" aria-label="테마 전환" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition-colors">
-          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
-          <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
-        </button>
-
-        <!-- GitHub Profile Link -->
-        <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필" class="hidden sm:inline-flex p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-          <i data-lucide="github" class="w-5 h-5"></i>
-        </a>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-button" type="button" aria-label="메뉴 열기" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-          <i data-lucide="menu" class="w-6 h-6"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown Nav Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 px-4 pt-2 pb-4 space-y-1">
-      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">소개</a>
-      <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">기술 스택</a>
-      <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">프로젝트</a>
-      <a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">경력 & 활동</a>
-      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">연락처</a>
-      <div class="pt-2 flex items-center space-x-2">
-        <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-3 py-2 text-sm text-slate-600 dark:text-slate-300">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          <span>GitHub 방문하기</span>
-        </a>
-      </div>
-    </div>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="처음으로 이동"><span class="brand-mark">DK</span><span>Dongchan Kim</span></a>
+    <nav class="desktop-nav" aria-label="주요 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a></nav>
+    <a class="header-link" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+    <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button>
+    <nav class="mobile-nav" aria-label="모바일 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a><a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-20 space-y-32">
-
-    <!-- 1. Hero Section -->
-    <section id="hero" class="pt-8 md:pt-16 pb-10 flex flex-col items-center text-center space-y-8 reveal-on-scroll">
-      
-      <!-- Status Badge -->
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800/60 shadow-sm">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        새로운 도전과 협업에 열려 있습니다
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/hero-workspace.png" alt="노트북과 전자 부품이 놓인 시스템 프로그래밍 작업 공간" />
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> System programming student</p>
+        <h1 id="hero-title">호기심을<br /><em>코드로 실행하다.</em></h1>
+        <p class="hero-copy">안녕하세요, 김동찬입니다. 컴퓨터가 움직이는 원리를 배우고, 작은 아이디어를 직접 만들어 확인합니다.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">작업 보기 <i data-lucide="arrow-down" aria-hidden="true"></i></a>
+          <a class="button button-ghost" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
+        </div>
       </div>
-
-      <!-- Main Headline -->
-      <div class="space-y-4 max-w-3xl">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
-          기술로 가치를 만들어내는<br />
-          개발자 <span class="gradient-text">김동찬</span>입니다.
-        </h1>
-        <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-          사용자 중심의 가치를 고민하고, 깔끔한 코드와 유려한 사용자 경험을 만들어가는 것에 큰 즐거움을 느낍니다.
-        </p>
-      </div>
-
-      <!-- CTA Action Buttons -->
-      <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-        <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all">
-          <i data-lucide="layers" class="w-4 h-4"></i>
-          프로젝트 둘러보기
-        </a>
-        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-sm border border-slate-300 dark:border-slate-700 shadow-sm hover:-translate-y-0.5 transition-all">
-          <i data-lucide="mail" class="w-4 h-4"></i>
-          연락하기
-        </a>
-        <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-sm font-medium transition-colors">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          GitHub
-        </a>
-      </div>
+      <p class="hero-index">PORTFOLIO / 2026</p>
     </section>
 
-    <!-- 2. About Me Section -->
-    <section id="about" class="space-y-10 scroll-mt-24 reveal-on-scroll">
-      <div class="text-center space-y-2">
-        <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">About Me</h2>
-        <p class="text-3xl font-bold tracking-tight">지속해서 성장하는 개발자</p>
-      </div>
+    <section class="principles" aria-label="작업 원칙">
+      <article><b>01</b><span>Understand<br />the system.</span></article>
+      <article><b>02</b><span>Build<br />something small.</span></article>
+      <article><b>03</b><span>Learn by<br />breaking things.</span></article>
+    </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="interactive-card p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-950/80 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4">
-            <i data-lucide="code-2" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-2">클린 코드와 설계</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            유지보수가 쉽고 확장 가능한 코드를 지향합니다. 읽기 쉬운 구조와 명확한 책임을 가진 설계를 중요하게 여깁니다.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="interactive-card p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-950/80 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-4">
-            <i data-lucide="sparkles" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-2">사용자 중심 경험</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            빠르고 직관적인 인터페이스를 구현하며, 사용자의 불편함을 기민하게 포착하여 개선하는 것을 좋아합니다.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="interactive-card p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-950/80 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="git-pull-request" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold mb-2">협업과 소통</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            적극적인 피드백 교환과 문서화를 중요하게 생각하며, 팀원들과 함께 더 나은 해답을 찾아갑니다.
-          </p>
+    <section class="about section" id="about">
+      <div class="section-label reveal"><span>01</span> About</div>
+      <div class="about-layout">
+        <h2 class="reveal">보이는 화면보다<br />그 아래의 원리가<br />더 궁금합니다.</h2>
+        <div class="about-copy reveal">
+          <p>리눅스 터미널에서 첫 명령어를 입력하고, C로 작은 프로그램을 만들며 시스템의 언어를 익히고 있습니다.</p>
+          <p>아직 모르는 것이 많다는 사실을 즐깁니다. 이해한 것은 기록하고, 만든 것은 공유하면서 어제보다 한 단계 나아갑니다.</p>
+          <dl class="facts">
+            <div><dt>Focus</dt><dd>Linux · C · Git</dd></div>
+            <div><dt>Mode</dt><dd>Learn · Build · Repeat</dd></div>
+            <div><dt>Based</dt><dd>Republic of Korea</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <!-- 3. Skills Section -->
-    <section id="skills" class="space-y-10 scroll-mt-24 reveal-on-scroll">
-      <div class="text-center space-y-2">
-        <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">Tech Stack</h2>
-        <p class="text-3xl font-bold tracking-tight">보유 기술 및 역량</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <!-- Frontend -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
-          <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
-            <i data-lucide="layout" class="w-5 h-5 text-blue-500"></i>
-            <h3 class="font-bold text-base">Frontend</h3>
+    <section class="work section" id="work">
+      <div class="section-label reveal"><span>02</span> Selected work</div>
+      <div class="section-heading reveal"><h2>작게 시작한<br />세 가지 실험</h2><p>완벽한 결과보다 직접 실행해 본 경험을 모읍니다.</p></div>
+      <div class="project-list">
+        <article class="project reveal">
+          <div class="project-number">01</div>
+          <div class="project-visual terminal-window" aria-hidden="true">
+            <div class="window-bar"><span></span><span></span><span></span></div>
+            <pre><code><i>$</i> gcc hello.c -o hello
+<i>$</i> ./hello
+hello, linux!
+<span class="cursor">_</span></code></pre>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JavaScript (ES6+)</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">TypeScript</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">React</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">HTML5 / CSS3</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Tailwind CSS</span>
+          <div class="project-copy"><p class="project-type">C / Linux</p><h3>Hello, System</h3><p>컴파일과 실행 과정을 직접 따라가며 만든 첫 C 프로그램. 한 줄의 출력에서 프로그램이 동작하는 전체 흐름을 배웠습니다.</p><div class="tags"><span>C</span><span>GCC</span><span>Ubuntu</span></div></div>
+        </article>
+        <article class="project reveal">
+          <div class="project-number">02</div>
+          <div class="project-visual script-window" aria-hidden="true">
+            <div class="script-title">run_hello.sh</div>
+            <div class="script-lines"><span><b>#!/bin/bash</b></span><span>echo <i>"starting..."</i></span><span>./hello</span><span class="success">✓ process complete</span></div>
           </div>
-        </div>
-
-        <!-- Backend & Database -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
-          <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
-            <i data-lucide="server" class="w-5 h-5 text-indigo-500"></i>
-            <h3 class="font-bold text-base">Backend & DB</h3>
+          <div class="project-copy"><p class="project-type">Shell / Automation</p><h3>One-command Runner</h3><p>반복하는 명령을 셸 스크립트 하나로 묶은 자동 실행 도구. 실행 권한과 파일 경로가 왜 중요한지 익혔습니다.</p><div class="tags"><span>Bash</span><span>chmod</span><span>CLI</span></div></div>
+        </article>
+        <article class="project reveal">
+          <div class="project-number">03</div>
+          <div class="project-visual web-window" aria-hidden="true">
+            <div class="web-top"><span>●</span><span>dttchan411.github.io</span></div>
+            <div class="web-body"><strong>DK</strong><div><b>Build.</b><b>Learn.</b><b>Share.</b></div></div>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Node.js</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">RESTful APIs</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PostgreSQL</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL</span>
-          </div>
-        </div>
-
-        <!-- Tools & DevOps -->
-        <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
-          <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
-            <i data-lucide="terminal" class="w-5 h-5 text-purple-500"></i>
-            <h3 class="font-bold text-base">Tools & DevOps</h3>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Git & GitHub</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Docker</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Linux / Shell</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">GitHub Actions</span>
-            <span class="px-3 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">VS Code</span>
-          </div>
-        </div>
-
+          <div class="project-copy"><p class="project-type">Web / GitHub</p><h3>This Portfolio</h3><p>코드를 만들고 Git으로 기록한 뒤 GitHub Pages에 공개한 개인 홈페이지. 지금 보고 있는 바로 이 프로젝트입니다.</p><div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div></div>
+        </article>
       </div>
     </section>
 
-    <!-- 4. Projects Section -->
-    <section id="projects" class="space-y-10 scroll-mt-24 reveal-on-scroll">
-      <div class="text-center space-y-2">
-        <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">Portfolio</h2>
-        <p class="text-3xl font-bold tracking-tight">주요 프로젝트</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <!-- Project Card 1 -->
-        <div class="interactive-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col justify-between">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-100 dark:bg-blue-950 text-blue-600 dark:text-blue-300">Web Application</span>
-              <div class="flex items-center space-x-2 text-slate-400">
-                <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  <i data-lucide="github" class="w-5 h-5"></i>
-                </a>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white">개인 맞춤형 생산성 플랫폼</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              사용자의 일상 업무와 목표 달성을 돕기 위한 반응형 웹 대시보드 프로젝트입니다. 실시간 데이터 동기화와 직관적인 UX/UI를 중점으로 개발하였습니다.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">React</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">TypeScript</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">Tailwind CSS</span>
-            </div>
-          </div>
-          <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-500">2026</span>
-            <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
-              자세히 보기 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project Card 2 -->
-        <div class="interactive-card rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm overflow-hidden flex flex-col justify-between">
-          <div class="p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-300">Service & API</span>
-              <div class="flex items-center space-x-2 text-slate-400">
-                <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  <i data-lucide="github" class="w-5 h-5"></i>
-                </a>
-              </div>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 dark:text-white">실시간 데이터 모니터링 시스템</h3>
-            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              지속적인 지표 추적 및 알림을 제공하는 백엔드 파이프라인 및 시각화 서비스입니다. REST API를 연동하여 안정적인 처리 속도를 구현했습니다.
-            </p>
-            <div class="flex flex-wrap gap-2 pt-2">
-              <span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">Python</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">FastAPI</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded">PostgreSQL</span>
-            </div>
-          </div>
-          <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs">
-            <span class="text-slate-500">2025</span>
-            <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="font-medium text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1">
-              자세히 보기 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-
+    <section class="now section" id="now">
+      <div class="section-label reveal"><span>03</span> Now</div>
+      <div class="now-layout">
+        <div class="now-title reveal"><p class="status"><span></span> Currently learning</p><h2>지금은 시스템의<br />기초를 쌓는 중.</h2></div>
+        <ol class="learning-list reveal">
+          <li><span>01</span><div><b>Linux fundamentals</b><small>터미널, 파일과 권한, 서비스</small></div></li>
+          <li><span>02</span><div><b>C programming</b><small>컴파일, 메모리, 프로세스</small></div></li>
+          <li><span>03</span><div><b>Git workflow</b><small>Commit, Push, 그리고 기록</small></div></li>
+        </ol>
       </div>
     </section>
 
-    <!-- 5. Experience & Timeline Section -->
-    <section id="experience" class="space-y-10 scroll-mt-24 reveal-on-scroll">
-      <div class="text-center space-y-2">
-        <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">Career & Education</h2>
-        <p class="text-3xl font-bold tracking-tight">경력 및 활동</p>
-      </div>
-
-      <div class="max-w-2xl mx-auto border-l-2 border-slate-200 dark:border-slate-800 pl-6 space-y-10 relative">
-        
-        <!-- Timeline Item 1 -->
-        <div class="relative space-y-2">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 border-4 border-slate-50 dark:border-slate-950"></span>
-          <span class="text-xs font-semibold text-blue-600 dark:text-blue-400">2024 - 현재</span>
-          <h3 class="text-base font-bold text-slate-900 dark:text-white">지속적인 프로젝트 개발 및 오픈소스 탐색</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            새로운 웹 기술 스택을 탐구하고 개인 프로젝트 및 오픈소스 생태계에 기여하며 역량을 다지고 있습니다.
-          </p>
-        </div>
-
-        <!-- Timeline Item 2 -->
-        <div class="relative space-y-2">
-          <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-600 border-4 border-slate-50 dark:border-slate-950"></span>
-          <span class="text-xs font-semibold text-slate-500">2022 - 2024</span>
-          <h3 class="text-base font-bold text-slate-900 dark:text-white">소프트웨어 개발 & 학업</h3>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            컴퓨터 과학 기초, 자료구조, 웹 서비스 설계 등 소프트웨어 엔지니어링의 핵심 지식을 습득하고 다양한 팀 프로젝트를 주도했습니다.
-          </p>
-        </div>
-
-      </div>
+    <section class="contact">
+      <p class="reveal">NEXT /</p>
+      <h2 class="reveal">다음 아이디어를<br /><em>함께 실행해 볼까요?</em></h2>
+      <a class="contact-link reveal" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub에서 만나기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
     </section>
-
-    <!-- 6. Contact Section -->
-    <section id="contact" class="space-y-8 scroll-mt-24 reveal-on-scroll">
-      <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-blue-50/50 to-indigo-50/30 dark:from-slate-900/60 dark:to-slate-900/40 border border-blue-100 dark:border-slate-800 text-center space-y-6 max-w-3xl mx-auto shadow-sm">
-        
-        <div class="w-14 h-14 mx-auto rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-500/30">
-          <i data-lucide="send" class="w-6 h-6"></i>
-        </div>
-
-        <div class="space-y-2">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">함께 이야기 나누고 싶으신가요?</h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
-            새로운 프로젝트 협업, 기술적인 대화, 혹은 가벼운 커피챗도 언제든 환영합니다.
-          </p>
-        </div>
-
-        <!-- Contact Actions -->
-        <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-          
-          <!-- Copy Email Button -->
-          <button id="copy-email-btn" data-email="doungchan@example.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm shadow-md transition-all">
-            <i data-lucide="copy" class="w-4 h-4"></i>
-            <span>이메일 주소 복사</span>
-          </button>
-
-          <!-- Direct Mail Link -->
-          <a href="mailto:doungchan@example.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm border border-slate-200 dark:border-slate-700 transition-all">
-            <i data-lucide="mail" class="w-4 h-4"></i>
-            <span>메일 보내기</span>
-          </a>
-
-          <!-- GitHub Link -->
-          <a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-900 dark:bg-slate-800 text-white hover:bg-slate-800 dark:hover:bg-slate-700 font-medium text-sm transition-all">
-            <i data-lucide="github" class="w-4 h-4"></i>
-            <span>GitHub 방문</span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 dark:border-slate-800/80 py-8 text-center text-xs text-slate-500 dark:text-slate-400">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p>© 2026 김동찬 (Dongchan Kim). All rights reserved.</p>
-      <div class="flex items-center space-x-4">
-        <a href="#hero" class="hover:text-slate-800 dark:hover:text-slate-200 transition-colors">맨 위로 이동 ↑</a>
-        <a href="https://github.com/dttchan411/dttchan411.github.io" target="_blank" rel="noopener noreferrer" class="hover:text-slate-800 dark:hover:text-slate-200 transition-colors">GitHub Repository</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Toast Notification for Copy Email -->
-  <div id="copy-toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-3 rounded-xl shadow-xl flex items-center space-x-2 text-sm font-medium opacity-0 pointer-events-none transition-opacity duration-300">
-    <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
-    <span>이메일 주소가 클립보드에 복사되었습니다!</span>
-  </div>
-
-  <!-- Custom Scripts -->
-  <script src="script.js"></script>
+  <footer><p>© 2026 Dongchan Kim</p><p>Built to learn. Published to share.</p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>
