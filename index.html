@@ -4,30 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="시스템을 배우고 작은 아이디어를 코드로 옮기는 김동찬의 포트폴리오입니다." />
-  <meta name="theme-color" content="#10100f" />
+  <meta name="theme-color" content="#080f1b" />
+  <meta property="og:title" content="김동찬 | Beyond the Surface" />
+  <meta property="og:description" content="보이는 화면 너머, 시스템의 원리를 탐구하고 작은 아이디어를 코드로 옮깁니다." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dttchan411.github.io/" />
   <title>김동찬 | Systems, Code & Curiosity</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest" defer></script>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/monolith.svg" as="image" />
+  <link rel="stylesheet" href="styles.css?v=20260916" />
+  <script src="script.js?v=20260916" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#about">본문으로 바로가기</a>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="처음으로 이동"><span class="brand-mark">DK</span><span>Dongchan Kim</span></a>
     <nav class="desktop-nav" aria-label="주요 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a></nav>
     <a class="header-link" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-    <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button>
-    <nav class="mobile-nav" aria-label="모바일 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a><a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav"><i data-lucide="menu" aria-hidden="true"></i></button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a><a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
   </header>
 
   <main id="top">
+    <div class="hero-journey">
     <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/hero-workspace.png" alt="노트북과 전자 부품이 놓인 시스템 프로그래밍 작업 공간" />
+      <img class="hero-image" src="assets/monolith.svg" alt="은빛 궤도 안에 떠 있는 거대한 입체 구조물" width="1600" height="1000" fetchpriority="high" />
       <div class="hero-shade"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="eyebrow"><span></span> System programming student</p>
+        <p class="eyebrow"><span></span> Beyond the surface / 2026</p>
         <h1 id="hero-title">호기심을<br /><em>코드로 실행하다.</em></h1>
         <p class="hero-copy">안녕하세요, 김동찬입니다. 컴퓨터가 움직이는 원리를 배우고, 작은 아이디어를 직접 만들어 확인합니다.</p>
         <div class="hero-actions">
@@ -35,8 +43,11 @@
           <a class="button button-ghost" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
         </div>
       </div>
-      <p class="hero-index">PORTFOLIO / 2026</p>
+      <div class="hero-caption" aria-hidden="true"><span>FIG. 01 / THE CORE</span><span>Every system begins<br />with a question.</span></div>
+      <div class="hero-bottom"><a class="scroll-cue" href="#about"><span class="scroll-line" aria-hidden="true"></span> Scroll to explore <span aria-hidden="true">↓</span></a><span>SYSTEMS · CODE · CURIOSITY</span><button class="motion-toggle" type="button" aria-pressed="false" hidden>움직임 끄기</button></div>
+      <div class="journey-progress" aria-hidden="true"><span></span></div>
     </section>
+    </div>
 
     <section class="principles" aria-label="작업 원칙">
       <article><b>01</b><span>Understand<br />the system.</span></article>
@@ -58,6 +69,7 @@
           </dl>
         </div>
       </div>
+      <p class="statement" aria-hidden="true">Understand the invisible.</p>
     </section>
 
     <section class="work section" id="work">
@@ -107,7 +119,7 @@ hello, linux!
     </section>
 
     <section class="contact">
-      <p class="reveal">NEXT /</p>
+      <p class="reveal">THE NEXT CHAPTER /</p>
       <h2 class="reveal">다음 아이디어를<br /><em>함께 실행해 볼까요?</em></h2>
       <a class="contact-link reveal" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub에서 만나기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
     </section>

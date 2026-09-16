@@ -1,45 +1,38 @@
-# 김동찬 개인 홈페이지 & 포트폴리오 (Dongchan Kim's Portfolio)
+# Dongchan Kim · Beyond the Surface
 
-김동찬 님의 개인 포트폴리오 및 홈페이지 레포지토리입니다.  
-GitHub Pages(`https://dttchan411.github.io`)를 통해 바로 웹상에 호스팅할 수 있도록 제작되었습니다.
+김동찬의 시스템 프로그래밍 포트폴리오입니다.
 
----
+**사이트:** https://dttchan411.github.io/
 
-## 🌟 주요 특징
+## 디자인과 기능
 
-- **반응형 디자인 (Responsive Design)**: PC, 태블릿, 모바일 등 모든 화면 크기에 최적화
-- **다크 모드 & 라이트 모드 (Dark/Light Mode)**: 상단 테마 버튼을 통해 즉시 전환 가능 (설정 자동 저장)
-- **모던한 UI/UX**: Tailwind CSS, Pretendard 폰트, Lucide Icons 및 부드러운 스크롤 애니메이션
-- **가벼운 스택**: 별도의 빌드 단계 없이 HTML, CSS, JavaScript만으로 즉시 작동
+- 깊은 남색과 은백색을 사용한 반응형 디자인
+- 직접 제작한 SVG 궤도와 입체 구조물 배경
+- 첫 화면에서 스크롤에 따라 배경을 확대하는 연출
+- 움직임 끄기/켜기 버튼 및 브라우저의 동작 줄이기 설정 지원
+- 모바일 메뉴, 키보드 탐색, 본문 바로가기
+- About, Selected work, Now와 GitHub 연락 링크
 
----
+외부 이미지·영상 생성 서비스나 실행용 JavaScript 라이브러리는 필요하지 않습니다. 글꼴은 Google Fonts에서 불러오며, 연결이 안 되면 기기의 기본 글꼴을 사용합니다. 소개 글과 프로젝트 설명은 index.html에서 수정할 수 있습니다.
 
-## 📂 파일 구성
+## 파일
 
-- `index.html`: 웹페이지의 전체 마크업 및 콘텐츠
-- `styles.css`: 폰트, 글래스모피즘, 배경 그라디언트, 커스텀 스크롤바 등 디자인 스타일
-- `script.js`: 다크모드 전환, 모바일 메뉴 토글, 스크롤 애니메이션, 이메일 복사 기능 등
+| 파일 | 역할 |
+| --- | --- |
+| index.html | 소개, 프로젝트, 메뉴와 메타 정보 |
+| styles.css | PC·모바일 디자인 및 동작 줄이기 대응 |
+| script.js | 스크롤 연출, 움직임 설정, 모바일 메뉴 |
+| assets/monolith.svg | 첫 화면의 벡터 일러스트 |
+| assets/favicon.svg | 브라우저 탭 아이콘 |
 
----
+assets/hero-workspace.png는 이전 디자인의 원본 이미지로 보관합니다.
 
-## 🚀 GitHub Pages 배포 방법
+## 실행과 배포
 
-1. 변경사항을 `main` 브랜치에 커밋 및 푸시합니다:
-   ```bash
-   git add .
-   git commit -m "Update portfolio website"
-   git push origin main
-   ```
-2. GitHub 저장소의 **Settings** > **Pages** 로 이동합니다.
-3. **Build and deployment** 항목의 **Source**를 `Deploy from a branch`로 설정하고 `main` 브랜치 `/ (root)`를 선택 후 **Save**합니다.
-4. 잠시 후 `https://dttchan411.github.io`에서 사이트가 라이브로 공개됩니다!
+별도의 빌드 과정 없이 정적 파일로 실행합니다. 로컬 확인 명령:
 
----
+    python -m http.server 8765 --bind 127.0.0.1
 
-## ✏️ 나만의 정보로 수정하는 방법
+GitHub Pages는 main 브랜치의 루트 폴더를 게시합니다. 반영 전에는 작은 모바일 화면, 메뉴 링크, 움직임 전환, 개발자 콘솔 오류를 확인합니다.
 
-`index.html` 파일을 열어 다음 부분을 본인의 정보에 맞게 변경하세요:
-- **이메일 주소**: `doungchan@example.com` 검색 후 실제 이메일로 변경 (`data-email` 및 `mailto:` 링크)
-- **프로젝트 목록**: `<section id="projects">` 섹션에서 프로젝트 이름, 설명, 태그, 링크 수정
-- **기술 스택**: `<section id="skills">` 섹션에서 보유한 기술 스택 태그 수정
-- **소개글 및 경력**: `<section id="about">` 및 `<section id="experience">` 내용 수정
+비밀 키나 인증 파일은 저장소에 올리지 않습니다. .env, credentials.json, token.json은 .gitignore에 등록되어 있습니다.
