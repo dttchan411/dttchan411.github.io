@@ -14,7 +14,7 @@ let scheduled = false;
 let journeyTop = 0;
 let journeyDistance = 1;
 
-try { motionPaused = localStorage.getItem('portfolio-motion') === 'off'; } catch { /* Storage may be unavailable in private browsers. */ }
+try { motionPaused = localStorage.getItem('personal-site-motion') === 'off'; } catch { /* Storage may be unavailable in private browsers. */ }
 
 function measureJourney() {
   journeyTop = journey.getBoundingClientRect().top + window.scrollY;
@@ -53,7 +53,7 @@ function syncMotion() {
 
 motionButton.addEventListener('click', () => {
   motionPaused = !motionPaused;
-  try { localStorage.setItem('portfolio-motion', motionPaused ? 'off' : 'on'); } catch { /* Preference still works for this visit. */ }
+  try { localStorage.setItem('personal-site-motion', motionPaused ? 'off' : 'on'); } catch { /* Preference still works for this visit. */ }
   syncMotion();
 });
 reducedMotion.addEventListener('change', syncMotion);

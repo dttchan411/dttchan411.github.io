@@ -3,128 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="시스템을 배우고 작은 아이디어를 코드로 옮기는 김동찬의 포트폴리오입니다." />
+  <meta name="description" content="김동찬의 개인 홈페이지. 한국기술교육대학교 컴퓨터공학부 소속과 연락처를 소개합니다." />
   <meta name="theme-color" content="#080f1b" />
-  <meta property="og:title" content="김동찬 | Beyond the Surface" />
-  <meta property="og:description" content="보이는 화면 너머, 시스템의 원리를 탐구하고 작은 아이디어를 코드로 옮깁니다." />
+  <meta property="og:title" content="김동찬 | 개인 홈페이지" />
+  <meta property="og:description" content="한국기술교육대학교 컴퓨터공학부 · 김동찬" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dttchan411.github.io/" />
-  <title>김동찬 | Systems, Code & Curiosity</title>
+  <title>김동찬 | 개인 홈페이지</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preload" href="assets/monolith.svg" as="image" />
-  <link rel="stylesheet" href="styles.css?v=20260916" />
-  <script src="script.js?v=20260916" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260916-profile" />
+  <script src="script.js?v=20260916-profile" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#about">본문으로 바로가기</a>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="처음으로 이동"><span class="brand-mark">DK</span><span>Dongchan Kim</span></a>
-    <nav class="desktop-nav" aria-label="주요 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a></nav>
-    <a class="header-link" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-    <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav"><i data-lucide="menu" aria-hidden="true"></i></button>
-    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="#about">About</a><a href="#work">Work</a><a href="#now">Now</a><a href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    <a class="brand" href="#top" aria-label="처음으로 이동"><span class="brand-mark">DK</span><span>김동찬</span></a>
+    <nav class="desktop-nav" aria-label="주요 메뉴"><a href="#about">소개</a><a href="#education">학교</a><a href="#contact">연락처</a></nav>
+    <a class="header-link" href="mailto:doungchan010@gmail.com">이메일 <span aria-hidden="true">↗</span></a>
+    <button class="menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-nav"><span aria-hidden="true">☰</span></button>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴"><a href="#about">소개</a><a href="#education">학교</a><a href="#contact">연락처</a></nav>
   </header>
-
   <main id="top">
     <div class="hero-journey">
-    <section class="hero" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/monolith.svg" alt="은빛 궤도 안에 떠 있는 거대한 입체 구조물" width="1600" height="1000" fetchpriority="high" />
-      <div class="hero-shade"></div>
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow"><span></span> Beyond the surface / 2026</p>
-        <h1 id="hero-title">호기심을<br /><em>코드로 실행하다.</em></h1>
-        <p class="hero-copy">안녕하세요, 김동찬입니다. 컴퓨터가 움직이는 원리를 배우고, 작은 아이디어를 직접 만들어 확인합니다.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">작업 보기 <i data-lucide="arrow-down" aria-hidden="true"></i></a>
-          <a class="button button-ghost" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer"><i data-lucide="github" aria-hidden="true"></i> GitHub</a>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/monolith.svg" alt="" width="1600" height="1000" fetchpriority="high" />
+        <div class="hero-shade"></div><div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">DONGCHAN KIM</p>
+          <h1 id="hero-title">김동찬</h1>
+          <p class="hero-affiliation">한국기술교육대학교<br /><span>컴퓨터공학부</span></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#about">소개 보기 <span aria-hidden="true">↓</span></a>
+            <a class="button button-ghost" href="#contact">연락처 <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-      </div>
-      <div class="hero-caption" aria-hidden="true"><span>FIG. 01 / THE CORE</span><span>Every system begins<br />with a question.</span></div>
-      <div class="hero-bottom"><a class="scroll-cue" href="#about"><span class="scroll-line" aria-hidden="true"></span> Scroll to explore <span aria-hidden="true">↓</span></a><span>SYSTEMS · CODE · CURIOSITY</span><button class="motion-toggle" type="button" aria-pressed="false" hidden>움직임 끄기</button></div>
-      <div class="journey-progress" aria-hidden="true"><span></span></div>
-    </section>
+        <div class="hero-bottom"><a class="scroll-cue" href="#about"><span class="scroll-line" aria-hidden="true"></span> 소개 <span aria-hidden="true">↓</span></a><span>한국기술교육대학교 · 컴퓨터공학부</span><button class="motion-toggle" type="button" aria-pressed="false" hidden>움직임 끄기</button></div>
+        <div class="journey-progress" aria-hidden="true"><span></span></div>
+      </section>
     </div>
-
-    <section class="principles" aria-label="작업 원칙">
-      <article><b>01</b><span>Understand<br />the system.</span></article>
-      <article><b>02</b><span>Build<br />something small.</span></article>
-      <article><b>03</b><span>Learn by<br />breaking things.</span></article>
-    </section>
-
-    <section class="about section" id="about">
-      <div class="section-label reveal"><span>01</span> About</div>
+    <section class="about section" id="about" aria-labelledby="about-title">
+      <div class="section-label"><span>01</span> 소개</div>
       <div class="about-layout">
-        <h2 class="reveal">보이는 화면보다<br />그 아래의 원리가<br />더 궁금합니다.</h2>
-        <div class="about-copy reveal">
-          <p>리눅스 터미널에서 첫 명령어를 입력하고, C로 작은 프로그램을 만들며 시스템의 언어를 익히고 있습니다.</p>
-          <p>아직 모르는 것이 많다는 사실을 즐깁니다. 이해한 것은 기록하고, 만든 것은 공유하면서 어제보다 한 단계 나아갑니다.</p>
-          <dl class="facts">
-            <div><dt>Focus</dt><dd>Linux · C · Git</dd></div>
-            <div><dt>Mode</dt><dd>Learn · Build · Repeat</dd></div>
-            <div><dt>Based</dt><dd>Republic of Korea</dd></div>
-          </dl>
-        </div>
-      </div>
-      <p class="statement" aria-hidden="true">Understand the invisible.</p>
-    </section>
-
-    <section class="work section" id="work">
-      <div class="section-label reveal"><span>02</span> Selected work</div>
-      <div class="section-heading reveal"><h2>작게 시작한<br />세 가지 실험</h2><p>완벽한 결과보다 직접 실행해 본 경험을 모읍니다.</p></div>
-      <div class="project-list">
-        <article class="project reveal">
-          <div class="project-number">01</div>
-          <div class="project-visual terminal-window" aria-hidden="true">
-            <div class="window-bar"><span></span><span></span><span></span></div>
-            <pre><code><i>$</i> gcc hello.c -o hello
-<i>$</i> ./hello
-hello, linux!
-<span class="cursor">_</span></code></pre>
-          </div>
-          <div class="project-copy"><p class="project-type">C / Linux</p><h3>Hello, System</h3><p>컴파일과 실행 과정을 직접 따라가며 만든 첫 C 프로그램. 한 줄의 출력에서 프로그램이 동작하는 전체 흐름을 배웠습니다.</p><div class="tags"><span>C</span><span>GCC</span><span>Ubuntu</span></div></div>
-        </article>
-        <article class="project reveal">
-          <div class="project-number">02</div>
-          <div class="project-visual script-window" aria-hidden="true">
-            <div class="script-title">run_hello.sh</div>
-            <div class="script-lines"><span><b>#!/bin/bash</b></span><span>echo <i>"starting..."</i></span><span>./hello</span><span class="success">✓ process complete</span></div>
-          </div>
-          <div class="project-copy"><p class="project-type">Shell / Automation</p><h3>One-command Runner</h3><p>반복하는 명령을 셸 스크립트 하나로 묶은 자동 실행 도구. 실행 권한과 파일 경로가 왜 중요한지 익혔습니다.</p><div class="tags"><span>Bash</span><span>chmod</span><span>CLI</span></div></div>
-        </article>
-        <article class="project reveal">
-          <div class="project-number">03</div>
-          <div class="project-visual web-window" aria-hidden="true">
-            <div class="web-top"><span>●</span><span>dttchan411.github.io</span></div>
-            <div class="web-body"><strong>DK</strong><div><b>Build.</b><b>Learn.</b><b>Share.</b></div></div>
-          </div>
-          <div class="project-copy"><p class="project-type">Web / GitHub</p><h3>This Portfolio</h3><p>코드를 만들고 Git으로 기록한 뒤 GitHub Pages에 공개한 개인 홈페이지. 지금 보고 있는 바로 이 프로젝트입니다.</p><div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div></div>
-        </article>
+        <div><h2 id="about-title">안녕하세요.<br />김동찬입니다.</h2><p class="about-summary">한국기술교육대학교 컴퓨터공학부 소속입니다.<br />학교와 연락처를 이곳에서 확인하실 수 있습니다.</p></div>
+        <dl class="profile-details">
+          <div><dt>이름</dt><dd>김동찬 <span>Dongchan Kim</span></dd></div>
+          <div><dt>학교</dt><dd>한국기술교육대학교</dd></div>
+          <div><dt>학부</dt><dd>컴퓨터공학부</dd></div>
+        </dl>
       </div>
     </section>
-
-    <section class="now section" id="now">
-      <div class="section-label reveal"><span>03</span> Now</div>
-      <div class="now-layout">
-        <div class="now-title reveal"><p class="status"><span></span> Currently learning</p><h2>지금은 시스템의<br />기초를 쌓는 중.</h2></div>
-        <ol class="learning-list reveal">
-          <li><span>01</span><div><b>Linux fundamentals</b><small>터미널, 파일과 권한, 서비스</small></div></li>
-          <li><span>02</span><div><b>C programming</b><small>컴파일, 메모리, 프로세스</small></div></li>
-          <li><span>03</span><div><b>Git workflow</b><small>Commit, Push, 그리고 기록</small></div></li>
-        </ol>
+    <section class="education" id="education" aria-labelledby="education-title">
+      <img class="campus-image" src="assets/koreatech-campus.jpg" alt="한국기술교육대학교 다산정보관 전경, 2015년 4월 촬영" width="2592" height="1944" loading="lazy" />
+      <div class="campus-shade" aria-hidden="true"></div>
+      <div class="education-content">
+        <div class="section-label"><span>02</span> 학교</div>
+        <p class="school-name-en">KOREATECH</p>
+        <h2 id="education-title">한국기술교육대학교</h2>
+        <p class="department">컴퓨터공학부</p>
+        <p class="school-description">컴퓨터 하드웨어와 소프트웨어를 아우르는 교육과정을 운영하는 학부입니다.</p>
+        <div class="school-links"><a href="https://www.koreatech.ac.kr/index.es?sid=a1" target="_blank" rel="noopener noreferrer">학교 홈페이지 <span aria-hidden="true">↗</span></a><a href="https://www.koreatech.ac.kr/menu.es?mid=b10101000000" target="_blank" rel="noopener noreferrer">학부 소개 <span aria-hidden="true">↗</span></a></div>
       </div>
+      <p class="photo-credit">다산정보관 · 2015.04 / 사진: <a href="https://commons.wikimedia.org/wiki/File:한국기술교육대학교_다산정보관_(2015년_4월).JPG" target="_blank" rel="noopener noreferrer">Wodndb</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a><span>화면에 맞게 표시 영역 조정</span></p>
     </section>
-
-    <section class="contact">
-      <p class="reveal">THE NEXT CHAPTER /</p>
-      <h2 class="reveal">다음 아이디어를<br /><em>함께 실행해 볼까요?</em></h2>
-      <a class="contact-link reveal" href="https://github.com/dttchan411" target="_blank" rel="noopener noreferrer">GitHub에서 만나기 <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="section-label"><span>03</span> 연락처</div>
+      <div class="contact-layout">
+        <div><h2 id="contact-title">연락처</h2><p class="contact-copy">아래 전화번호와 이메일로 연락하실 수 있습니다.</p></div>
+        <address class="contact-details">
+          <a href="tel:+821027795670"><span class="contact-kind">전화</span><span class="contact-value">010-2779-5670</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+          <a href="mailto:doungchan010@gmail.com"><span class="contact-kind">이메일</span><span class="contact-value email-value">doungchan010@gmail.com</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        </address>
+      </div>
     </section>
   </main>
-
-  <footer><p>© 2026 Dongchan Kim</p><p>Built to learn. Published to share.</p><a href="#top">Back to top ↑</a></footer>
+  <footer><p>© 2026 김동찬</p><p>한국기술교육대학교 · 컴퓨터공학부</p><a href="#top">맨 위로 ↑</a></footer>
 </body>
 </html>
